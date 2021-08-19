@@ -1,19 +1,19 @@
 // app functionality
 const { prompt } = require("inquirer");
+const logo = require("asciiart-logo");
 const db = require("./db");
 require("console.table");
-const logo = require("asciiart-logo");
 
 init();
 
 // ASCII character generated logo by dependency
 function init() {
-  const mainLogo = logo({ name: "Employee Tracker" }).render();
-
-  console.log(mainLogo);
-
-  displayPrompt();
-}
+    const logoText = logo({ name: "Employee Tracker" }).render();
+  
+    console.log(logoText);
+  
+    displayPrompt();
+  }
 
 async function displayPrompt() {
   const { choice } = await prompt([
@@ -137,7 +137,7 @@ async function viewEmployees() {
     console.log("\n");
     console.table(employees);
   
-    loadMainPrompts();
+    displayPrompt();
   }
   
   async function viewEmployeesByDepartment() {
@@ -162,7 +162,7 @@ async function viewEmployees() {
     console.log("\n");
     console.table(employees);
   
-    loadMainPrompts();
+    displayPrompt();
   }
   
   async function viewEmployeesByManager() {
@@ -192,7 +192,7 @@ async function viewEmployees() {
       console.table(employees);
     }
   
-    loadMainPrompts();
+    displayPrompt();
   }
   
   async function removeEmployee() {
@@ -216,7 +216,7 @@ async function viewEmployees() {
   
     console.log("Employee removed");
   
-    loadMainPrompts();
+    displayPrompt();
   }
   
   async function updateEmployeeRole() {
@@ -256,7 +256,7 @@ async function viewEmployees() {
   
     console.log("Employee's role updated");
   
-    loadMainPrompts();
+    displayPrompt();
   }
   
   async function updateEmployeeManager() {
@@ -297,7 +297,7 @@ async function viewEmployees() {
   
     console.log("Employee's manager updated");
   
-    loadMainPrompts();
+    displayPrompt();
   }
   
   async function viewRoles() {
@@ -306,7 +306,7 @@ async function viewEmployees() {
     console.log("\n");
     console.table(roles);
   
-    loadMainPrompts();
+    displayPrompt();
   }
   
   async function addRole() {
@@ -338,7 +338,7 @@ async function viewEmployees() {
   
     console.log(`Added ${role.title} to the database`);
   
-    loadMainPrompts();
+    displayPrompt();
   }
   
   async function removeRole() {
@@ -363,7 +363,7 @@ async function viewEmployees() {
   
     console.log("Role removed");
   
-    loadMainPrompts();
+    displayPrompt();
   }
   
   async function viewDepartments() {
@@ -372,7 +372,7 @@ async function viewEmployees() {
     console.log("\n");
     console.table(departments);
   
-    loadMainPrompts();
+    displayPrompt();
   }
   
   async function addDepartment() {
@@ -387,7 +387,7 @@ async function viewEmployees() {
   
     console.log(`Added ${department.name} to the database`);
   
-    loadMainPrompts();
+    displayPrompt();
   }
   
   async function removeDepartment() {
@@ -410,7 +410,7 @@ async function viewEmployees() {
   
     console.log(`Department removed`);
   
-    loadMainPrompts();
+    displayPrompt();
   }
   
   async function addEmployee() {
@@ -463,7 +463,7 @@ async function viewEmployees() {
       `Added ${employee.first_name} ${employee.last_name} to the database`
     );
   
-    loadMainPrompts();
+    displayPrompt();
   }
   
   function quit() {
