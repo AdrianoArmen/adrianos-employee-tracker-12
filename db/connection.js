@@ -8,11 +8,11 @@ const util = require("util");
 
 const connection = mysql.createConnection({
     
-  host: "localhost",
-  user: "root",
-  password: process.env.PASSWORD,
+  host: 'localhost',
+  user: 'root',
+  password: 'mypass',
 
-  database: "employees",
+  database: 'employees',
 });
 
 connection.connect();

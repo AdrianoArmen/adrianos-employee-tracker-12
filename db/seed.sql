@@ -1,35 +1,33 @@
--- seeds structure use employees;
-
-INSERT INTO employee
-    (first_name, last_name, role_id, manager_id)
-VALUES
-    ('Steven', 'Hyde', 1, NULL),
-    ('Donna', 'Pinciotti', 2, 1),
-    ('Eric', 'Forman', 3, NULL),
-    ('Fez', 'Chavez', 4, 3),
-    ('Jackie', 'Burkhart', 5, NULL),
-    ('Michael', 'Kelso', 6, 5),
-    ('Red', 'Forman', 7, NULL),
-    ('Leo', 'Hippy', 8, 7);
+use employees;
 
 INSERT INTO department
     (name)
 VALUES
     ('Sales'),
-    ('Development'),
-    ('Marketing'),
-    ('HR');
-
+    ('Engineering'),
+    ('Finance'),
+    ('Legal');
 
 INSERT INTO role
     (title, salary, department_id)
 VALUES
-    ('Sales Lead', 900000, 1),
-    ('Salesperson', 85000, 1),
-    ('Web Developer', 100000, 2),
-    ('Software Engineer', 110000, 2),
-    ('Account Manager', 70000, 3),
-    ('Media Buyert', 80000, 3),
-    ('Recruiter', 65000, 4),
-    ('Staff Manager', 75000, 4);
+    ('Sales Lead', 100000, 1),
+    ('Salesperson', 80000, 1),
+    ('Lead Engineer', 150000, 2),
+    ('Software Engineer', 120000, 2),
+    ('Account Manager', 160000, 3),
+    ('Accountant', 125000, 3),
+    ('Legal Team Lead', 250000, 4),
+    ('Lawyer', 190000, 4);
 
+INSERT INTO employee
+    (first_name, last_name, role_id, manager_id)
+VALUES
+    ('John', 'Doe', 1, NULL),
+    ('Mike', 'Chan', 2, 1),
+    ('Ashley', 'Rodriguez', 3, NULL),
+    ('Kevin', 'Tupik', 4, 3),
+    ('Kunal', 'Singh', 5, NULL),
+    ('Malia', 'Brown', 6, 5),
+    ('Sarah', 'Lourd', 7, NULL),
+    ('Tom', 'Allen', 8, 7);
