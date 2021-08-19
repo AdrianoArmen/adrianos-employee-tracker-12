@@ -1,10 +1,15 @@
 // connection structure
 const mysql = require("mysql");
+const dotenv = require('dotenv')
+
+
+
 
 const connection = mysql.createConnection({
+    
   host: "localhost",
   user: "root",
-  password: "mypass",
+  password: process.env.PASSWORD,
 
   database: "employees",
 });
