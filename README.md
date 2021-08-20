@@ -9,7 +9,7 @@ Homework 12 - Employee Tracker
 
 ## Walkthrough Video 📺
 
-- [Video Link](https://www.loom.com/share/5eb1b87516d3450a9e612bcffcb2f2e4)
+- [Video Link](https://www.loom.com/share/9ab524e6d8674bc4b1285cd556134fd0)
 
 
 
